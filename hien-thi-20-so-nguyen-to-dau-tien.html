@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Moi ban nhap so luong cac so nguyen to can tim</h2>
+<button onclick="search()">Try It!</button>
+<script>
+    let n;
+    function test(){
+        if(n<2) return false
+        else {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    return false;
+                }else if (n%2!=0) {
+                    return true;
+                }
+            }
+        }
+    }
+    function search(){
+        let num;
+        num = parseInt(prompt('moi ban nhap so luong so nguyen to can tim'))
+        let i = 2;
+        let count = 0;
+        while (count <= num) {
+            if (test(i)==true){
+                document.write(" " + i);
+                count++;
+            }
+            i++;
+        }
+    }
+</script>
+</body>
+</html>
